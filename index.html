@@ -1,66 +1,122 @@
 <!DOCTYPE html>
-   <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-      <!--=============== FAVICON ===============-->
-      <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+		<!--=============== FAVICON ===============-->
+		<link
+			rel="shortcut icon"
+			href="assets/favicon/favicon.png"
+			type="image/x-icon"
+		/>
 
-      <!--=============== REMIXICONS ===============-->
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.7.0/remixicon.css">
+		<!--=============== REMIXICONS ===============-->
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+		/>
 
-      <!--=============== CSS ===============-->
-      <link rel="stylesheet" href="assets/css/styles.css">
+		<!--=============== CSS ===============-->
+		<link rel="stylesheet" href="css/styles.css" />
 
-      <title>Responsive bakery website - Bedimcode</title>
-   </head>
-   <body>
-      <!--==================== HEADER ====================-->
-      <header class="header" id="header">
-         
-      </header>
+		<title>Bakery Website | Webify</title>
+	</head>
+	<body onload="todayDate()">
+		<!--==================== HEADER ====================-->
+		<header class="header" id="header">
+			<nav class="nav container">
+				<a href="#" class="nav-logo">Bakery</a>
 
-      <!--==================== MAIN ====================-->
-      <main class="main">
-         <!--==================== HOME ====================-->
-         <section class="home section" id="home">
-            
-         </section>
+				<div class="nav-menu" id="nav-menu">
+					<ul class="nav-list">
+						<li class="nav-item">
+							<a href="#home" class="nav-link">Home</a>
+						</li>
+						<li class="nav-item">
+							<a href="#new" class="nav-link">New</a>
+						</li>
+						<li class="nav-item">
+							<a href="#about" class="nav-link">About Us</a>
+						</li>
+						<li class="nav-item">
+							<a href="#favourites" class="nav-link">Favourites</a>
+						</li>
+						<li class="nav-item">
+							<a href="#visit" class="nav-link">Location</a>
+						</li>
+					</ul>
 
-         <!--==================== NEWS ====================-->
-         <section class="new section" id="new">
-            
-         </section>
+					<!-- Close Button -->
+					<div class="nav-close" id="nav-close">
+						<i class="ri-close-line"></i>
+					</div>
 
-         <!--==================== ABOUT ====================-->
-         <section class="about section" id="about">
-            
-         </section>
-         
-         <!--==================== FAVORITES ====================-->
-         <section class="favorite section" id="favorite">
-            
-         </section>
+					<img
+						src="assets/header/bread-4.png"
+						alt="Image of Bread "
+						class="nav-img-1"
+					/>
+					<img
+						src="assets/header/bread-1.png"
+						alt="Image of Bread "
+						class="nav-img-2"
+					/>
+				</div>
 
-         <!--==================== VISIT ====================-->
-         <section class="visit section" id="visit">
-            
-         </section>
-      </main>
+				<!-- Toggle Button -->
+				<div class="nav-toggle" id="nav-toggle">
+					<i class="ri-menu-fill"></i>
+				</div>
+			</nav>
+		</header>
 
-      <!--==================== FOOTER ====================-->
-      <footer class="footer">
-         
-      </footer>
+		<!--==================== MAIN ====================-->
+		<main class="main">
+			<!--==================== HOME ====================-->
+			<section class="home section" id="home"></section>
 
-      <!--========== SCROLL UP ==========-->
-      
+			<!--==================== NEWS ====================-->
+			<section class="new section" id="new"></section>
 
-      <!--=============== SCROLLREVEAL ===============-->
-      <script src=""></script>
+			<!--==================== ABOUT ====================-->
+			<section class="about section" id="about"></section>
 
-      <!--=============== MAIN JS ===============-->
-      <script src="assets/js/main.js"></script>
-   </body>
+			<!--==================== FAVORITES ====================-->
+			<section class="favorite section" id="favourites"></section>
+
+			<!--==================== VISIT ====================-->
+			<section class="visit section" id="visit"></section>
+		</main>
+
+		<!--==================== FOOTER ====================-->
+		<footer class="footer">
+			<div class="credit">
+				<p>
+					Copyright<sup>&copy;</sup> <span id="date"></span> | All Rights
+					Reserved
+				</p>
+				<span>
+					Developed by
+					<a
+						href="https://webify-io.github.io/webify/"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Webify<sup>&reg;</sup>
+					</a>
+				</span>
+			</div>
+		</footer>
+
+		<!--===+++++======= SCROLL TOP =================-->
+
+		<!--=============== SCROLLREVEAL ===============-->
+		<script src=""></script>
+
+		<!--=============== MAIN JS ===============-->
+		<script src="js/main.js"></script>
+		<!--=============== DATE JS ===============-->
+		<script src="js/todayDate.js"></script>
+	</body>
 </html>

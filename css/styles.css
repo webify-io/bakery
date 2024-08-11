@@ -1,0 +1,310 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*=============== VARIABLES CSS ===============*/
+:root {
+	--header-height: 3.5rem;
+
+	/*========== Colors ==========*/
+	/*Color mode HSL(hue, saturation, lightness)*/
+	--first-color: hsl(28, 88%, 62%);
+	--first-color-alt: hsl(28, 84%, 58%);
+	--title-color: hsl(0, 0%, 95%);
+	--text-color: hsl(0, 0%, 75%);
+	--text-color-light: hsl(0, 0%, 65%);
+	--black-color: hsl(0, 0%, 6%);
+	--body-color: hsl(0, 0%, 6%);
+	--container-color: hsl(0, 0%, 10%);
+
+	/*========== Font and typography ==========*/
+	/*.5rem = 8px | 1rem = 16px ...*/
+	--body-font: 'Montserrat', sans-serif;
+	--second-font: 'Dancing Script', cursive;
+	--biggest-font-size: 3rem;
+	--bigger-font-size: 2rem;
+	--h1-font-size: 1.5rem;
+	--h2-font-size: 1.25rem;
+	--h3-font-size: 1rem;
+	--normal-font-size: 0.938rem;
+	--small-font-size: 0.813rem;
+
+	/*========== Font weight ==========*/
+	--font-regular: 400;
+	--font-semi-bold: 600;
+	--font-bold: 700;
+
+	/*========== z index ==========*/
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+/*========== Responsive typography ==========*/
+@media screen and (min-width: 1150px) {
+	:root {
+		--biggest-font-size: 5rem;
+		--bigger-font-size: 3rem;
+		--h1-font-size: 2.25rem;
+		--h2-font-size: 1.5rem;
+		--h3-font-size: 1.25rem;
+		--normal-font-size: 1rem;
+		--small-font-size: 0.875rem;
+	}
+}
+
+/*==============* CSS Reset *===============*/
+/*================= BASE ===================*/
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	/* box-sizing: border-box; */
+	/* padding: 0; */
+	margin: 0;
+}
+/* Base */
+html {
+	scroll-behavior: smooth;
+}
+/* Base */
+body/* ,
+button */ {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+}
+/*
+  * Typographic tweaks!
+    antialiased: Improve text rendering
+*/
+body {
+	background-color: var(--body-color);
+	color: var(--text-color);
+	-webkit-font-smoothing: antialiased;
+}
+/*
+  * Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/* Base */
+button {
+	border: none;
+	outline: none;
+}
+
+/*
+  * Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/* Base */
+h1,
+h2,
+h3,
+h4 {
+	color: var(--title-color);
+	font-weight: var(--font-bold);
+}
+/* Base */
+ul {
+	list-style: none;
+}
+/* Base */
+a {
+	text-decoration: none;
+}
+
+/*
+  * Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+	/* height: auto; */
+}
+
+/*=============== REUSABLE CSS CLASSES ===============*/
+.container {
+	max-width: 1120px;
+	margin-inline: 1.5rem;
+}
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.section {
+	padding-block: 5rem 1rem;
+}
+
+.section-title {
+	font-size: var(--bigger-font-size);
+	font-family: var(--second-font);
+	margin-bottom: 1.5rem;
+	text-align: center;
+}
+
+.main {
+	overflow: hidden; /* For animation ScrollReveal */
+}
+
+/*=============== HEADER & NAV ===============*/
+.header {
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	z-index: var(--z-fixed);
+}
+.nav {
+	position: relative;
+	height: var(--header-height);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.nav-logo {
+	color: var(--first-color);
+	font-size: var(--h2-font-size);
+	font-family: var(--second-font);
+	transition: color 0.4s;
+}
+.nav-logo:hover {
+	color: var(--first-color-alt);
+}
+.nav-toggle,
+.nav-close {
+	font-size: 1.5rem;
+	color: var(--title-color);
+	cursor: pointer;
+}
+
+/* Navigation for mobile devices */
+@media screen and (max-width: 1150px) {
+	.nav-menu {
+		position: fixed;
+		top: 0;
+		right: -100%;
+		background-color: hsla(0, 0%, 6%, 0.2);
+		backdrop-filter: blur(16px);
+		-webkit-backdrop-filter: blur(16px);
+		width: 80%;
+		height: 100%;
+		padding: 6rem 3rem 0;
+		transition: right 0.4s;
+	}
+}
+
+.nav-list {
+	display: flex;
+	flex-direction: column;
+	row-gap: 2.5rem;
+}
+.nav-link {
+	color: var(--title-color);
+	font-weight: var(--font-semi-bold);
+	transition: color 0.4s;
+}
+.nav-link:hover {
+	color: var(--first-color);
+}
+.nav-close,
+.nav-img-1,
+.nav-img-2 {
+	position: absolute;
+}
+.nav-close {
+	top: 1rem;
+	right: 1.5rem;
+}
+.nav-img-1 {
+	width: 80px;
+	top: 11rem;
+	right: 0.75rem;
+}
+.nav-img-2 {
+	width: 60px;
+	top: 28rem;
+	left: 6rem;
+}
+
+/* Show menu */
+.show-menu {
+	right: 0;
+}
+
+/* Add blur header */
+
+/* Active link */
+
+/*=============== HOME ====================*/
+
+/*=============== BUTTON ==================*/
+
+/*=============== NEW =====================*/
+
+/*=============== ABOUT ===================*/
+
+/*=============== FAVORITES ===============*/
+
+/*=============== VISIT ===================*/
+
+/*=============== FOOTER ==================*/
+.footer {
+	margin: 0 2rem;
+	border-top: 1px solid var(--first-color);
+}
+.footer .credit {
+	text-align: center;
+	padding: 1rem 0;
+}
+.footer .credit p {
+	font-weight: 500;
+	line-height: 1.5rem;
+}
+.footer .credit span {
+	font-size: var(--small-font-size);
+	line-height: 1rem;
+	text-transform: capitalize;
+}
+.credit a {
+	font-weight: 500;
+	color: #26a7d8;
+}
+.credit a:hover {
+	color: #30c5ff;
+}
+
+/*=============== SCROLL BAR ===============*/
+
+/*=============== SCROLL UP ===============*/
+
+/* Show Scroll Up */
+
+/*=============== BREAKPOINTS ===============*/
+/* For small devices */
+
+/* For medium devices */
+
+/* For large devices */
