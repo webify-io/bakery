@@ -367,6 +367,36 @@ svg {
 }
 
 /*=============== NEW =====================*/
+.new-container {
+	padding-top: 1.5rem;
+	row-gap: 3.5rem;
+}
+.new-content {
+	row-gap: 2rem;
+}
+.new-card {
+	display: flex;
+	column-gap: 1rem;
+	align-items: center;
+}
+.new-img {
+	width: 150px;
+}
+.new-title {
+	font-size: var(--h2-font-size);
+	font-family: var(--second-font);
+	color: var(--first-color);
+	margin-bottom: 0.5rem;
+}
+.new-description {
+	font-size: var(--small-font-size);
+}
+.new-card:nth-child(2) img {
+	order: -1;
+}
+.new-button {
+	justify-self: center;
+}
 
 /*=============== ABOUT ===================*/
 
