@@ -63,7 +63,7 @@
 }
 * {
 	/* box-sizing: border-box; */
-	/* padding: 0; */
+	padding: 0;
 	margin: 0;
 }
 /* Base */
@@ -399,7 +399,26 @@ svg {
 }
 
 /*=============== ABOUT ===================*/
-
+.about-container {
+	row-gap: 4rem;
+}
+.about-data {
+	position: relative;
+	text-align: center;
+}
+.about-description {
+	margin-bottom: 3rem;
+}
+.about-bread {
+	width: 60px;
+	position: absolute;
+	bottom: 1rem;
+	right: 0;
+}
+.about-img {
+	width: 320px;
+	justify-self: center;
+}
 /*=============== FAVORITES ===============*/
 
 /*=============== VISIT ===================*/
