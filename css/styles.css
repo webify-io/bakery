@@ -508,7 +508,7 @@ svg {
 
 /*=============== FOOTER ==================*/
 .footer {
-	padding-block: 3rem 2rem;
+	padding-block: 3rem 0.75rem;
 }
 .footer-container {
 	position: relative;
@@ -576,7 +576,6 @@ svg {
 	display: block;
 	margin: 6rem 1.5rem 0;
 	text-align: center;
-	font-size: var(--small-font-size);
 	border-top: 1px solid var(--first-color);
 }
 .footer .credit p {
@@ -587,6 +586,7 @@ svg {
 .footer .credit span {
 	line-height: 1rem;
 	text-transform: capitalize;
+	font-size: var(--small-font-size);
 }
 .credit a {
 	font-weight: 500;
