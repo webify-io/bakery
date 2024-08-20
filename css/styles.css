@@ -467,6 +467,39 @@ svg {
 }
 
 /*=============== VISIT ===================*/
+.visit-container {
+	position: relative;
+	padding-block: 3rem;
+}
+.visit-bg,
+.visit-shadow {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+.visit-bg {
+	object-fit: cover;
+	object-position: center;
+}
+.visit-shadow {
+	background: linear-gradient(
+		180deg,
+		hsl(0, 0%, 6%) 0%,
+		hsla(0, 0%, 4%, 0.1) 50%,
+		hsl(0, 0%, 6%) 100%
+	);
+}
+.visit-data {
+	text-align: center;
+}
+.visit-description {
+	font-size: var(--h2-font-size);
+	color: var(--title-color);
+	margin-bottom: 3rem;
+}
 
 /*=============== FOOTER ==================*/
 .footer {
