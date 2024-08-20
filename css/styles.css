@@ -590,11 +590,12 @@ svg {
 }
 .credit a {
 	font-weight: 500;
-	color: rgb(48, 114, 223);
+	color: rgb(41, 100, 196);
+	/* color: rgb(48, 114, 223); */
 	/* color: #26a7d8; */
 }
 .credit a:hover {
-	color: rgba(48, 114, 223, 0.7);
+	color: rgba(41, 100, 196, 0.7);
 	/* color: #30c5ff; */
 }
 
