@@ -842,7 +842,7 @@ svg {
 		grid-template-columns: 480px;
 	}
 	.footer {
-		padding-block: 5rem 3rem;
+		padding-block: 5rem 3rem 1rem;
 	}
 	.footer-logo,
 	.footer-title {
