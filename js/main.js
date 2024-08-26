@@ -71,3 +71,50 @@ const scrollActive = () => {
 window.addEventListener('scroll', scrollActive);
 
 /*=============== SCROLL REVEAL ANIMATION ===================*/
+const sr = ScrollReveal({
+	origin: 'top',
+	distance: '40px',
+	opacity: 1,
+	scale: 1.1,
+	duration: 2500,
+	delay: 300,
+	//reset: true, //Animations Repeat
+});
+
+sr.reveal(`.home-data, .about-img, .about-data, .visit-data`);
+
+sr.reveal(`.home-image, .footer-img-1, .footer-img-2`, {
+	rotate: { z: -15 },
+});
+sr.reveal(`.home-bread, .about-bread`, {
+	rotate: { z: 15 },
+});
+sr.reveal(`.home-footer`, {
+	scale: 1,
+	origin: 'bottom',
+});
+
+sr.reveal(`.new-card:nth-child(1) img`, {
+	rotate: { z: -30 },
+	distance: 0,
+});
+sr.reveal(`.new-card:nth-child(2) img`, {
+	rotate: { z: 15 },
+	distance: 0,
+	delay: 600,
+});
+sr.reveal(`.new-card:nth-child(3) img`, {
+	rotate: { z: -30 },
+	distance: 0,
+	delay: 900,
+});
+
+sr.reveal(`.favorite-card img`, {
+	interval: 100,
+	rotate: { z: 15 },
+	distance: 0,
+});
+
+sr.reveal(`.footer-container`, {
+	scale: 1,
+});
