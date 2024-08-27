@@ -593,13 +593,10 @@ svg {
 }
 .credit a {
 	font-weight: 500;
-	color: rgb(47, 122, 245);
-	/* color: rgb(48, 114, 223); */
-	/* color: #26a7d8; */
+	color: hsl(201, 79%, 50%);
 }
 .credit a:hover {
-	color: rgba(47, 122, 245, 0.7);
-	/* color: #30c5ff; */
+	color: hsl(201, 79%, 60%);
 }
 
 /*=============== SCROLL BAR ===============*/
